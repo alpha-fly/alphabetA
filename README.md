@@ -16,6 +16,11 @@
 1) 주봉 API : http://13.125.145.26:3000/api/charts/weekly
 2) 월봉 API : http://13.125.145.26:3000/api/charts/monthly
 
+## 3. API 명세
+
+![api](https://user-images.githubusercontent.com/99331753/187027671-3275846c-8d6a-46f1-88ac-c6a73116e1f1.jpg)
+
+
 
 ## 3. 문제 해결 중 아쉬운 점
 
