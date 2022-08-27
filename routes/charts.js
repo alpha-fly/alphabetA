@@ -93,7 +93,7 @@ router.get("/monthly", async (req, res) => {
                     pool.releaseConnection(conn);
                 }    
                 
-                // 전제 : 
+                // 전제 : 월간의 변경은 date 변수에서 년, 월에 해당하는 부분만 확인하면 된다. 
                 const monthlyGraph = [];
                 let monthInfo = {};                                                 
                 let id = 0;
@@ -116,10 +116,8 @@ router.get("/monthly", async (req, res) => {
                         // fluctuation : 해당 월의 등락 여부 (양봉 true, 음봉 false)
                         monthInfo.id = id;
                         monthInfo.ticker = dailyInfo.ticker;
-
                         monthInfo.firstDayKR = dailyInfo.date.toLocaleString('ko-KO').split('.',3).join('.');
-                        monthInfo.lastDayKR = "";
-                        
+                        monthInfo.lastDayKR = "";                        
                         monthInfo.bprc_adj = dailyInfo.bprc_adj;
                         monthInfo.prc_adj = dailyInfo.prc_adj;
                         monthInfo.hi_adj = dailyInfo.hi_adj;
